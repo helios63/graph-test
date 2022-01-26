@@ -3,8 +3,10 @@ import './styles.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-      </header>
+      <h1>New Graph</h1>
+      <div className='container'>
+        
+      </div>
     </div>
   );
 }
