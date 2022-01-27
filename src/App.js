@@ -1,16 +1,21 @@
 import './styles.css';
 import React, {useEffect} from 'react';
 
-function App() {
+const App = () => {
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('data.json')
+        const response = await fetch('data.json', {
+          headers : { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+           }
+          })
 
         if (response.status === 200) {
           const results = await response.json()
-
+          console.log(results)
         }
       } catch(errors) {
         console.log(errors)
