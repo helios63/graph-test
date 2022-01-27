@@ -1,0 +1,212 @@
+{
+    "work": [
+      {
+        "id": 1,
+        "ponderation": 3,
+        "valeurReponseA": 0,
+        "valeurReponseB": 1,
+        "choixPatient": "A",
+        "valeurChoix": 0
+      },
+      {
+        "id": 2,
+        "ponderation": 6,
+        "valeurReponseA": 1,
+        "valeurReponseB": 0,
+        "choixPatient": "A",
+        "valeurChoix": 1
+      },
+      {
+        "id": 3,
+        "ponderation": 4,
+        "valeurReponseA": 1,
+        "valeurReponseB": 0,
+        "choixPatient": "A",
+        "valeurChoix": 1
+      },
+      {
+        "id": 4,
+        "ponderation": 3,
+        "valeurReponseA": 1,
+        "valeurReponseB": 0,
+        "choixPatient": "B",
+        "valeurChoix": 0
+      },
+      {
+        "id": 5,
+        "ponderation": 8,
+        "valeurReponseA": 0,
+        "valeurReponseB": 1,
+        "choixPatient": "B",
+        "valeurChoix": 1
+      }
+    ],
+    "finance": [
+      {
+        "id": 1,
+        "ponderation": 2,
+        "valeurReponseA": 1,
+        "valeurReponseB": 0,
+        "choixPatient": "A",
+        "valeurChoix": 1
+      },
+      {
+        "id": 2,
+        "ponderation": 9,
+        "valeurReponseA": 1,
+        "valeurReponseB": 0,
+        "choixPatient": "B",
+        "valeurChoix": 0
+      },
+      {
+        "id": 3,
+        "ponderation": 6,
+        "valeurReponseA": 1,
+        "valeurReponseB": 0,
+        "choixPatient": "A",
+        "valeurChoix": 1
+      },
+      {
+        "id": 4,
+        "ponderation": 3,
+        "valeurReponseA": 0,
+        "valeurReponseB": 1,
+        "choixPatient": "B",
+        "valeurChoix": 1
+      },
+      {
+        "id": 5,
+        "ponderation": 1,
+        "valeurReponseA": 0,
+        "valeurReponseB": 1,
+        "choixPatient": "B",
+        "valeurChoix": 1
+      }
+    ],
+    "social": [
+      {
+        "id": 1,
+        "ponderation": 1,
+        "valeurReponseA": 1,
+        "valeurReponseB": 0,
+        "choixPatient": "A",
+        "valeurChoix": 1
+      },
+      {
+        "id": 2,
+        "ponderation": 4,
+        "valeurReponseA": 1,
+        "valeurReponseB": 0,
+        "choixPatient": "A",
+        "valeurChoix": 1
+      },
+      {
+        "id": 3,
+        "ponderation": 3,
+        "valeurReponseA": 1,
+        "valeurReponseB": 0,
+        "choixPatient": "A",
+        "valeurChoix": 1
+      },
+      {
+        "id": 4,
+        "ponderation": 3,
+        "valeurReponseA": 0,
+        "valeurReponseB": 1,
+        "choixPatient": "A",
+        "valeurChoix": 0
+      },
+      {
+        "id": 5,
+        "ponderation": 7,
+        "valeurReponseA": 1,
+        "valeurReponseB": 0,
+        "choixPatient": "B",
+        "valeurChoix": 0
+      }
+    ],
+    "leisure": [
+      {
+        "id": 1,
+        "ponderation": 3,
+        "valeurReponseA": 0,
+        "valeurReponseB": 1,
+        "choixPatient": "B",
+        "valeurChoix": 1
+      },
+      {
+        "id": 2,
+        "ponderation": 2,
+        "valeurReponseA": 1,
+        "valeurReponseB": 0,
+        "choixPatient": "A",
+        "valeurChoix": 1
+      },
+      {
+        "id": 3,
+        "ponderation": 1,
+        "valeurReponseA": 1,
+        "valeurReponseB": 0,
+        "choixPatient": "A",
+        "valeurChoix": 1
+      },
+      {
+        "id": 4,
+        "ponderation": 6,
+        "valeurReponseA": 1,
+        "valeurReponseB": 0,
+        "choixPatient": "A",
+        "valeurChoix": 1
+      },
+      {
+        "id": 5,
+        "ponderation": 7,
+        "valeurReponseA": 0,
+        "valeurReponseB": 1,
+        "choixPatient": "B",
+        "valeurChoix": 1
+      }
+    ],
+    "health": [
+      {
+        "id": 1,
+        "ponderation": 2,
+        "valeurReponseA": 1,
+        "valeurReponseB": 0,
+        "choixPatient": "A",
+        "valeurChoix": 1
+      },
+      {
+        "id": 2,
+        "ponderation": 2,
+        "valeurReponseA": 1,
+        "valeurReponseB": 0,
+        "choixPatient": "A",
+        "valeurChoix": 1
+      },
+      {
+        "id": 3,
+        "ponderation": 8,
+        "valeurReponseA": 0,
+        "valeurReponseB": 1,
+        "choixPatient": "B",
+        "valeurChoix": 1
+      },
+      {
+        "id": 4,
+        "ponderation": 4,
+        "valeurReponseA": 1,
+        "valeurReponseB": 0,
+        "choixPatient": "B",
+        "valeurChoix": 0
+      },
+      {
+        "id": 5,
+        "ponderation": 7,
+        "valeurReponseA": 1,
+        "valeurReponseB": 0,
+        "choixPatient": "B",
+        "valeurChoix": 0
+      }
+    ]
+  }
