@@ -1,9 +1,7 @@
 body {
   background-color: rgb(238, 248, 245);
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -50,4 +48,8 @@ p {
   background-color: rgb(129, 211, 177);
   border: 2px solid #FFF;
   font-weight: bold;
+}
+
+.rv-xy-plot {
+  transform: translateX(-37px);
 }
