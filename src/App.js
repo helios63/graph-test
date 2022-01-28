@@ -106,6 +106,14 @@ const App = () => {
     {x: 'Health', y: {healthScore}}
   ]
 
+  // const myData = [
+  //   {x: 'Work', y: 18},
+  //   {x: 'Finance', y: 12},
+  //   {x: 'Social', y: 8},
+  //   {x: 'Leisure', y: 19},
+  //   {x: 'Health', y: 12}
+  // ]
+
   return (
     <div className="App">
       <div className='container'>
@@ -119,7 +127,7 @@ const App = () => {
               <HorizontalGridLines />
               <XAxis />
               <YAxis />
-              <VerticalBarSeries data={myData} color="#cd3b54"/>
+              <VerticalBarSeries data={myData} color="#F6836A"/>
             </XYPlot>
             <p>Work Score : {workScore}</p>
             <p>Finance Score : {financeScore}</p>
@@ -135,3 +143,4 @@ const App = () => {
 }
 
 export default App;
+

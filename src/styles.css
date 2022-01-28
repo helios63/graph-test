@@ -4,6 +4,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #111;
 }
 
 code {
@@ -51,5 +52,9 @@ p {
 }
 
 .rv-xy-plot {
-  transform: translateX(-37px);
+  transform: translateX(-20px);
+}
+
+.rv-xy-plot__axis__tick__text {
+  fill: #111 !important;
 }
