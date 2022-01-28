@@ -13,6 +13,7 @@ const App = () => {
   const [socialScore, setSocialScore] = useState(0)
   const [leisureScore, setLeisureScore] = useState(0)
   const [healthScore, setHealthScore] = useState(0)
+  const [myData, setMyData] = useState([])
 
   // Fetching Data.json data
   // useEffect(() => {
@@ -72,23 +73,30 @@ const App = () => {
 
         if (response.status === 200) {
           const results = await response.json()
-          // console.log(results)
-          // setResults(results)
 
-            // All differents scores 
-            const workScore = calculate(results.work)
-            setWorkScore(workScore)
-            const financeScore = calculate(results.finance)
-            setFinanceScore(financeScore)
-            const socialScore = calculate(results.social)
-            setSocialScore(socialScore)
-            const leisureScore = calculate(results.leisure)
-            setLeisureScore(leisureScore)
-            const healthScore = calculate(results.health)
-            setHealthScore(healthScore)
+          // All differents scores 
+          const workScore = calculate(results.work)
+          setWorkScore(workScore)
+          const financeScore = calculate(results.finance)
+          setFinanceScore(financeScore)
+          const socialScore = calculate(results.social)
+          setSocialScore(socialScore)
+          const leisureScore = calculate(results.leisure)
+          setLeisureScore(leisureScore)
+          const healthScore = calculate(results.health)
+          setHealthScore(healthScore)
 
-            const finalScore = (workScore + financeScore + socialScore + leisureScore + healthScore) / 5
-            setFinalScore(finalScore)
+          const finalScore = (workScore + financeScore + socialScore + leisureScore + healthScore) / 5
+          setFinalScore(finalScore)
+
+          const myData = [
+            {x: 'Work', y: workScore},
+            {x: 'Finance', y: financeScore},
+            {x: 'Social', y: socialScore},
+            {x: 'Leisure', y: leisureScore},
+            {x: 'Health', y: healthScore}
+          ]
+          setMyData(myData)
 
         }
       } catch(errors) {
@@ -96,15 +104,8 @@ const App = () => {
       }
     }
     fetchData();
-  }, [])
 
-  const myData = [
-    {x: 'Work', y: {workScore}},
-    {x: 'Finance', y: {financeScore}},
-    {x: 'Social', y: {socialScore}},
-    {x: 'Leisure', y: {leisureScore}},
-    {x: 'Health', y: {healthScore}}
-  ]
+  }, [])
 
   // const myData = [
   //   {x: 'Work', y: 18},
