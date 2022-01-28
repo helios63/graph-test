@@ -4,63 +4,87 @@ import RadialChart from 'react-vis/dist/radial-chart';
 
 const App = () => {
 
-  // Calculate the ponderated score
-  const Calculate = resultat => {
-
-    const scoreArray = []
-
-    resultat.forEach( score => {
-      if (score.choixPatient === 'A') {
-        const finalScore = score.ponderation * score.valeurReponseA
-        scoreArray.push(finalScore)
-      } else {
-        const finalScore = score.ponderation * score.valeurReponseB
-        scoreArray.push(finalScore)
-      }
-    })
-    
-    const sum = scoreArray.reduce((partialSum, a) => partialSum + a, 0);
-    return sum
-  }
-
   // saving results in Hook
   const [results, setResults] = useState([])
+  const [finalScore, setFinalScore] = useState(0)
 
   // Fetching Data.json data
-  useEffect(() => {
-    const fetchData = async () => {
-      
-      try {
-        const response = await fetch('data.json', {
-          headers : { 
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-           }
-          })
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await fetch('data.json', {
+  //         headers : { 
+  //           'Content-Type': 'application/json',
+  //           'Accept': 'application/json'
+  //           }
+  //         })
 
-        if (response.status === 200) {
+  //       if (response.status === 200) {
+  //         const results = await response.json()
+  //         console.log(results)
 
-          const results = await response.json()
-          setResults(results)
+  //       }
+  //     } catch(errors) {
+  //       console.log(errors)
+  //     }
+  //   }
+    
+  //   fetchData()
 
-        }
-      } catch(errors) {
-        console.log(errors)
+  // }, [])
+
+  // Calculate the ponderated score
+  const calculate = (resultat) => {
+    const scoreArray = [];
+
+    resultat.forEach(score => {
+      if (score.choixPatient === "A") {
+        const finalScore = (score.ponderation * score.valeurReponseA);
+        scoreArray.push(finalScore);
+
+        // console.log(finalScore);
+      } else {
+        const finalScore = (score.ponderation * score.valeurReponseB);
+        scoreArray.push(finalScore);
       }
+    });
+
+    const sum = scoreArray.reduce((partialSum, a) => partialSum + a, 0);
+    return sum;
+  };
+
+  // Fetching Data.json data
+  const fetchData = async () => {
+    try {
+      const response = await fetch('data.json', {
+        headers : { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+          }
+        })
+
+      if (response.status === 200) {
+        const results = await response.json()
+        // console.log(results)
+        setResults(results)
+
+          // All differents scores 
+          const workScore = calculate(results.work)
+          const financeScore = calculate(results.finance)
+          const socialScore = calculate(results.social)
+          const leisureScore = calculate(results.leisure)
+          const healthScore = calculate(results.health)
+
+          const finalScore = (workScore + financeScore + socialScore + leisureScore + healthScore) / 5
+          setFinalScore(finalScore)
+      }
+    } catch(errors) {
+      console.log(errors)
     }
-
-    fetchData()
-
-  }, [])
-
-  // All differents scores
-  const workScore = Calculate(results.work)
-  const financeScore = Calculate(results.finance)
-  const socialScore = Calculate(results.social)
-  const leisureScore = Calculate(results.leisure)
-  const healthScore = Calculate(results.health)
-
-  const finalScore = (workScore + financeScore + socialScore + leisureScore + healthScore) / 5
+  }
+  
+  fetchData();
+  // console.log(results)
 
   const myData = [{angle: 1}, {angle: 5}, {angle: 2}]
 
