@@ -6,7 +6,6 @@ import { XYPlot, VerticalGridLines, HorizontalGridLines, XAxis, YAxis, VerticalB
 const App = () => {
 
   // saving results in Hooks
-  // const [results, setResults] = useState([])
   const [finalScore, setFinalScore] = useState(0)
   const [workScore, setWorkScore] = useState(0)
   const [financeScore, setFinanceScore] = useState(0)
@@ -14,31 +13,6 @@ const App = () => {
   const [leisureScore, setLeisureScore] = useState(0)
   const [healthScore, setHealthScore] = useState(0)
   const [myData, setMyData] = useState([])
-
-  // Fetching Data.json data
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await fetch('data.json', {
-  //         headers : { 
-  //           'Content-Type': 'application/json',
-  //           'Accept': 'application/json'
-  //           }
-  //         })
-
-  //       if (response.status === 200) {
-  //         const results = await response.json()
-  //         console.log(results)
-
-  //       }
-  //     } catch(errors) {
-  //       console.log(errors)
-  //     }
-  //   }
-    
-  //   fetchData()
-
-  // }, [])
 
   // Calculate the ponderated score
   const calculate = (resultat) => {
@@ -89,6 +63,7 @@ const App = () => {
           const finalScore = (workScore + financeScore + socialScore + leisureScore + healthScore) / 5
           setFinalScore(finalScore)
 
+          // Data for the graph bars
           const myData = [
             {x: 'Work', y: workScore},
             {x: 'Finance', y: financeScore},
@@ -106,14 +81,6 @@ const App = () => {
     fetchData();
 
   }, [])
-
-  // const myData = [
-  //   {x: 'Work', y: 18},
-  //   {x: 'Finance', y: 12},
-  //   {x: 'Social', y: 8},
-  //   {x: 'Leisure', y: 19},
-  //   {x: 'Health', y: 12}
-  // ]
 
   return (
     <div className="App">

@@ -57,4 +57,5 @@ p {
 
 .rv-xy-plot__axis__tick__text {
   fill: #111 !important;
+  font-size: 12px !important;
 }
